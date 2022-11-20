@@ -2,16 +2,16 @@ const addtocartReducers=(state=[],action)=>{
     switch(action.type){
         case "addtocart":
             {
-                localStorage:setItem("cartitem",JSON.stringify([...state,action.payload]))
+                localStorage.setItem("cartitems",JSON.stringify([...state,action.payload]))
                 return[...state,action.payload]
             }
-            case "deletefromcart":
+            case "deletefrombasket":
                 {
                     let copyofBasket=[...state]
-                    let indeks=copyfoBasket.findIndex(item=>item.id===action.payload)
+                    let indeks=copyofBasket.findIndex(item=>item.id===action.payload)
                     copyofBasket.splice(indeks,1)
                     state=copyofBasket
-                    if(state.length===0){
+                     if(state.length===0){
                         localStorage.clear()
                     }else{
                         localStorage.setItem("cartitems",JSON.stringify(state))

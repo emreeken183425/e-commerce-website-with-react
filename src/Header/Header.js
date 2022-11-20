@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './Header.css'
 import {useSelector,useDispatch} from 'react-redux'
 import {cartclick,addtocart} from '../actions'
-import { BeakerIcon } from '@heroicons/react'
+
 const Header = () => {
 
     const cart=useSelector(state=>state.addtocart)
@@ -26,7 +26,7 @@ const Header = () => {
         <button>Search </button>
       </div>
       <div className='cart' onClick={()=>dispatch(cartclick()) }  >
-<BeakerIcon  className="bagicon" />
+<span className="bagicon" >🛒</span>
 <div className='quantity' >
 {cart.length}
 </div>

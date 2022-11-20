@@ -4,8 +4,11 @@
     top:0;
     left: 0;
     min-height: 10vh;
-   
     display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background: rgb(145, 218, 240);
 }
 
 input{

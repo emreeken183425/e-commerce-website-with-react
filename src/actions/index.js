@@ -7,7 +7,7 @@ export const addtocart=(payload)=>{
     }
 }
 
-export const deletefrombasket=(payload)=>{
+export const deletefromBasket=(payload)=>{
     return{
         type:"deletefrombasket",
         payload:payload,
